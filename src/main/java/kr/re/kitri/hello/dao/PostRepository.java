@@ -19,4 +19,9 @@ public class PostRepository {
         );
         return list;
     }
+
+    public void insertPost(Post post) {
+        // DB 에 insert...
+        System.out.println("인서트 완료.." + post);
+    }
 }

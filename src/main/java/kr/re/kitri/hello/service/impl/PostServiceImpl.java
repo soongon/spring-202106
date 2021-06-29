@@ -18,4 +18,9 @@ public class PostServiceImpl implements PostService {
     public List<Post> getAllPosts() {
         return postRepository.selectAllPosts();
     }
+
+    @Override
+    public void putPost(Post post) {
+        postRepository.insertPost(post);
+    }
 }

@@ -4,10 +4,7 @@ import kr.re.kitri.hello.model.Post;
 import kr.re.kitri.hello.service.PostService;
 import kr.re.kitri.hello.service.impl.PostServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +17,10 @@ public class PostController {
     @GetMapping("/posts")
     public List<Post> viewAllPosts() {
         return postService.getAllPosts();
+    }
+
+    @PostMapping("/posts")
+    public void registPost(@RequestBody Post post) {
+        postService.putPost(post);
     }
 }

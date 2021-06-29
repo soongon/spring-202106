@@ -9,4 +9,5 @@ import java.util.List;
 
 public interface PostService {
     List<Post> getAllPosts();
+    void putPost(Post post);
 }
