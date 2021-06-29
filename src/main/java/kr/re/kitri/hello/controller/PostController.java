@@ -23,4 +23,10 @@ public class PostController {
     public void registPost(@RequestBody Post post) {
         postService.putPost(post);
     }
+
+    @GetMapping("/posts/{postId}")
+    public Post viewPostById(@PathVariable long postId) {
+        System.out.println(postId);
+        return null;
+    }
 }
