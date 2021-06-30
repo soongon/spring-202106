@@ -11,4 +11,5 @@ import java.util.List;
 public interface PostRepository {
     List<Post> selectAllPosts();
     void insertPost(Post post);
+    Post selectPostById(long userId);
 }

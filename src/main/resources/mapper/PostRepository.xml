@@ -15,4 +15,15 @@
         insert into posts (post_id, title, author, body, likes)
         values (#{postId}, #{title}, #{author}, #{body}, #{likes})
     </insert>
+    <select id="selectPostById"
+            parameterType="java.lang.Long"
+            resultType="kr.re.kitri.hello.model.Post">
+        select  post_id as postId,
+                title,
+                author,
+                body,
+                likes
+        from    posts
+        where   post_id = #{userId}
+    </select>
 </mapper>
