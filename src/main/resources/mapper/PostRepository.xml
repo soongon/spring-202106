@@ -3,4 +3,16 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.re.kitri.hello.dao.PostRepository">
+    <select id="selectAllPosts" resultType="kr.re.kitri.hello.model.Post">
+        select  post_id as postId,
+                title,
+                author,
+                body,
+                likes
+        from    posts
+    </select>
+    <insert id="insertPost" parameterType="kr.re.kitri.hello.model.Post">
+        insert into posts (post_id, title, author, body, likes)
+        values (#{postId}, #{title}, #{author}, #{body}, #{likes})
+    </insert>
 </mapper>
