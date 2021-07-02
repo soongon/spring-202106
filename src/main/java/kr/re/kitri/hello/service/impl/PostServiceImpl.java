@@ -26,7 +26,6 @@ public class PostServiceImpl implements PostService {
     @Override
     @Transactional
     public List<Post> getAllPosts() {
-        logger.debug("hhhhhsdfsdf");
         return postRepository.selectAllPosts();
     }
 
