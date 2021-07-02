@@ -31,7 +31,6 @@ public class PostController {
 
     @GetMapping("/posts/{postId}")
     public Post viewPostById(@PathVariable long postId) {
-        System.out.println(postId);
-        return null;
+        return postService.getPostById(postId);
     }
 }

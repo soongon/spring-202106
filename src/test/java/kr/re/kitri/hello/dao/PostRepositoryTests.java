@@ -28,6 +28,6 @@ public class PostRepositoryTests {
     @Test
     public void testSelectPostById() {
         Post post = postRepository.selectPostById(1);
-
+        Assertions.assertEquals("kim", post.getAuthor());
     }
 }
